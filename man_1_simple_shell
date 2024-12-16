@@ -1,0 +1,63 @@
+.TH man 1 "16 Dec 2024" "1.0" "simple_shell man page"
+
+.SH NAME
+
+.B simple_shell \- hsh
+- Command line interpreter
+
+.SH SYNOPSIS
+
+.B ./hsh
+
+.SH DESCRIPTION
+
+simple_shell is a custom implementation of a UNIX shell. It provides only
+the basic functions of a shell similar to the one designed by Ken Thompson.
+Complilation and testing was done using Ubuntu 20.04 LTS
+
+.SH OVERVIEW
+
+Like other command line interfaces, simple_shell takes input either from the terminal
+or scripts and executes them.
+
+.SH INVOCATION
+
+GNU compiler collection (gcc) is recomended for compiling simple_shell with extra flags as shown.
+.P
+.RS
+.B $ ./hsh
+.P
+.RE
+In non-interactive mode, users can specify shell scripts to be executed by simple_shell usually through the use of pipes '|'
+.P
+.RS
+.B echo 'pwd' | ./hsh
+
+.SH EXECUTABLES
+
+Example of executables:
+.IP
+.br
+.\&
+.RS
+\&$ echo "Example of executables"
+.br
+\&"Example of executables"
+.br
+\&$
+
+
+.SH BUILTINS
+
+\\\\\\\\\\\\\\\\\\\TO DO\\\\\\\\\\\\\\
+
+.SH BUGS
+No known bugs have been found/reported as of (December 16, 2024).
+Please report any issues/bugs to the contributors listed in the AUTHORs section.
+
+.SH AUTHOR
+
+Angel Reyes Segarra <angel.reyes.segarra.gmail.com>
+
+.SH SEE ALSO
+sh
