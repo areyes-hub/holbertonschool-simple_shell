@@ -28,7 +28,7 @@ int prompt_line(char *str)
 	}
 	while (1)
 	{
-		printf("($) ");
+		printf(":) ");
 		read = getline(&buff, &len, stdin);
 		if (read == -1)
 		{
