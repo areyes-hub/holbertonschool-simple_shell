@@ -1,4 +1,7 @@
-.TH man 1 "16 Dec 2024" "1.0" "simple_shell man page"
+B.\"Manpage for simple_shell
+.\"Created by Angel Reyes
+
+.TH SIMPLESH 1 "16 Dec 2024" "1.0" "simple_shell man page"
 
 .SH NAME
 
@@ -60,8 +63,7 @@ B. exit
 - exits the shell
 
 .SH BUGS
-No known bugs have been found/reported as of (December 16, 2024).
-Please report any issues/bugs to the contributors listed in the AUTHORs section.
+No known bugs have been found/reported as of (December 16, 2024). Please report any issues/bugs to the contributors listed in the AUTHORs section.
 
 .SH AUTHOR
 
