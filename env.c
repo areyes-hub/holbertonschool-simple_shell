@@ -5,8 +5,6 @@
  * print_env - prints environment
  * Return: void.
  */
-/*extern char **environ;*/
-
 void print_env(void)
 {
 	pid_t pid = fork();
