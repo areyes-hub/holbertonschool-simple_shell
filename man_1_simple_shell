@@ -48,8 +48,16 @@ Example of executables:
 
 
 .SH BUILTINS
+The following builtin commands are supported:
 
-\\\\\\\\\\\\\\\\\\\TO DO\\\\\\\\\\\\\\
+B. env
+- Prints the current environment
+
+B. cd
+- Changes directory
+
+B. exit
+- exits the shell
 
 .SH BUGS
 No known bugs have been found/reported as of (December 16, 2024).
