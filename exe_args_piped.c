@@ -14,9 +14,7 @@ void exe_args_piped(char **parsed, char **parsed_pipe)
 	{
 		perror("Pipe failed");
 		return;
-	}
-
-	p1 = fork();
+	} p1 = fork();
 	if (p1 < 0)
 	{
 		perror("Fork failed for the first process");
@@ -27,11 +25,9 @@ void exe_args_piped(char **parsed, char **parsed_pipe)
 		close(pipefd[0]);
 		dup2(pipefd[1], STDOUT_FILENO);
 		close(pipefd[1]);
-
 		exe_args(parsed);
 		exit(0);
-	}
-	else
+	} else
 	{
 		p2 = fork();
 		if (p2 < 0)
@@ -47,8 +43,7 @@ void exe_args_piped(char **parsed, char **parsed_pipe)
 			exe_args(parsed_pipe);
 			exit(0);
 		}
-	}
-	close(pipefd[0]);
+	} close(pipefd[0]);
 	close(pipefd[1]);
 	wait(NULL);
 	wait(NULL);

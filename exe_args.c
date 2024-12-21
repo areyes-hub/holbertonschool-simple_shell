@@ -6,10 +6,7 @@
  */
 void exe_args(char **parsed)
 {
-	char *path_env = getenv("PATH");
-	char *path_cpy;
-	char *path;
-	char full_path[1024];
+	char *path_env = getenv("PATH"), *path_cpy, *path, full_path[1024];
 	pid_t pid;
 
 	if (path_env == NULL)
@@ -17,27 +14,21 @@ void exe_args(char **parsed)
 		perror("Error: PATH not set");
 		return;
 	}
-
 	path_cpy = strdup(path_env);
 	path = strtok(path_cpy, ":");
-
 	pid = fork();
-
 	if (pid == -1)
 	{
 		perror("fork failed");
 		free(path_cpy);
 		return;
-	}
-	else if (pid == 0)
+	} else if (pid == 0)
 	{
 		while (path != NULL)
 		{
 			snprintf(full_path, sizeof(full_path), "%s/%s", path, parsed[0]);
 			if (access(full_path, F_OK) == 0)
-			{
 				break;
-			}
 			path = strtok(NULL, ":");
 		}
 		if (path == NULL)
@@ -53,8 +44,6 @@ void exe_args(char **parsed)
 		}
 	}
 	else
-	{
 		wait(NULL);
-	}
 	free(path_cpy);
 }

@@ -14,6 +14,8 @@
 #define MAXCOM 1000
 #define MAXLIST 100
 
+extern char **environ;
+
 int handle_cd(char **parsed);
 int prompt_line(char *str);
 void print_env(void);

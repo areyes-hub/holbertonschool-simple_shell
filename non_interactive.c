@@ -14,6 +14,7 @@ void execute_non_interactive(char *input)
 	if (cmd_handler(parsed) == 0)
 	{
 		pid_t pid = fork();
+
 		if (pid == -1)
 		{
 			perror("fork failed");

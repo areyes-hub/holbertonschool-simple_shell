@@ -5,7 +5,7 @@
  * print_env - prints environment
  * Return: void.
  */
-extern char **environ;
+/*extern char **environ;*/
 
 void print_env(void)
 {

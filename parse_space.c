@@ -7,10 +7,8 @@
  */
 void parse_space(char *str, char **parsed)
 {
-	int i = 0;
-	char *token;
-	char temp[MAXLIST];
-	int in_quotes = 0;
+	int i = 0, in_quotes = 0;
+	char *token, temp[MAXLIST];
 
 	token = strsep(&str, " ");
 	if (token != NULL && strlen(token) > 0)
@@ -41,9 +39,7 @@ void parse_space(char *str, char **parsed)
 			parsed[i++] = strdup(temp);
 		}
 		else if (!in_quotes && strlen(token) > 0)
-		{
 			parsed[i++] = token;
-		}
 		if (i >= MAXLIST)
 		{
 			fprintf(stderr, "Error: too many arguments, MAXLIST reached\n");

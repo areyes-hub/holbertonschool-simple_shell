@@ -23,8 +23,7 @@ int prompt_line(char *str)
 			strcpy(str, buff);
 			free(buff);
 			return (0);
-		}
-		free(buff);
+		} free(buff);
 		return (1);
 	}
 	while (1)
@@ -37,9 +36,7 @@ int prompt_line(char *str)
 			return (1);
 		}
 		if (buff[read - 1] == '\n')
-		{
 			buff[read - 1] = '\0';
-		}
 		if (strlen(buff) != 0)
 		{
 			strcpy(str, buff);
@@ -47,9 +44,6 @@ int prompt_line(char *str)
 			return (0);
 		}
 		else if (strlen(buff) == 0)
-		{
 			continue;
-		}
-	}
-	free(buff);
+	} free(buff);
 }
