@@ -2,7 +2,8 @@
 
 .SH NAME
 
-.B simple_shell \- hsh
+.B simple_shell
+\- hsh
 - Command line interpreter
 
 .SH SYNOPSIS
@@ -38,25 +39,24 @@ In non-interactive mode, users can specify shell scripts to be executed by simpl
 Example of executables:
 .IP
 .br
-.\&
 .RS
-\&$ echo "Example of executables"
+.B $ echo "Example of executables"
 .br
-\&"Example of executables"
+.B "Example of executables"
 .br
-\&$
+.B $
 
 
 .SH BUILTINS
 The following builtin commands are supported:
 
-B. env
+.B env
 - Prints the current environment
 
-B. cd
+.B cd
 - Changes directory
 
-B. exit
+.B exit
 - exits the shell
 
 .SH BUGS
