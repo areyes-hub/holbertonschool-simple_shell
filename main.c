@@ -6,6 +6,8 @@
  */
 int main(void)
 {
+	set_manpath();
+
 	if (isatty(STDIN_FILENO) == 1)
 	{
 		shell_interactive();

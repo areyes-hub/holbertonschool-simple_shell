@@ -25,5 +25,6 @@ int own_exit(char **args);
 int own_env(char **args);
 int own_help(char **args);
 int _atoi(char *str);
+void set_manpath(void);
 
 #endif
