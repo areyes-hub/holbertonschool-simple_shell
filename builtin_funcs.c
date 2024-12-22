@@ -41,12 +41,8 @@ int own_env(char **args)
  */
 int own_exit(char **args)
 {
-	if (args[1])
-	{
-		return (_atoi(args[1]));
-	}
-	else
-		return (0);
+	(void)args;
+	return (0);
 }
 /**
  * own_help - print help
